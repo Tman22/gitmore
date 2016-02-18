@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+
+ // Home Page
+
+
+body {
+  padding-top: 70px; }
+
+.dashboard {
+  text-align: center;
+}
+
+ul.list-group {
+    width: initial;
+    height: 90vh;
+    overflow: scroll;
+}
+
+.home-page {
+  height: 100vh;
+  background-color: green;
+  text-align: center;
+  padding-top: 30vh;
+}

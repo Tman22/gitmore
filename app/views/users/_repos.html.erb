@@ -1,0 +1,10 @@
+<div role="tabpanel" class="tab-pane fade in active" id="repos">
+  <ul class="list-group">
+    <% @repos.each do |name| %>
+      <li class="list-group-item">
+      <span class="badge">Last updated: <%= name[1] %></span>
+    <%= link_to "#{name[0]}", "https://github.com/#{name}" %></li>
+    </li>
+    <% end %>
+  </ul>
+</div>

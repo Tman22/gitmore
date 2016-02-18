@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="col-md-2 dashboard">
+    <%= image_tag current_user.image_url, class: "img-circle img-thumbnail" %>
+    <h1> <%= current_user.nickname  %> </h1>
+    <h3> <%= current_user.name %> </h3>
+    <span>
+      <%= @follow[0] %>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <%= @follow[1] %>
+    </span><br>
+
+    <span> Followers &nbsp;&nbsp; Following</span>
+  </div>
+
+  <div class="col-md-8">
+    <ul class="nav nav-tabs nav-justified">
+      <li role="presentation" class="active"><a href="#contributation" aria-controls="contributations" role="tab" data-toggle="tab">Contributations</a></li>
+      <li role="presentation"><a href="#repos" aria-controls="repos" role="tab" data-toggle="tab">Repositories</a></li>
+      <li role="presentation"><a href="#activity" aria-controls="activity" role="tab" data-toggle="tab">Public Activity</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <%= render partial: '/users/contribute' %>
+      <%= render partial: '/users/repos' %>
+      <%= render partial: '/users/activity' %>
+    </div>
+
+  </div>
+  <div class="col-md-2"></div>
+</div>

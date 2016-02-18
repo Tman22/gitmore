@@ -1,0 +1,10 @@
+<div role="tabpanel" class="tab-pane fade in active" id="activity">
+  <ul class="list-group">
+    <% @commits.each do |name, url | %>
+      <li class="list-group-item">
+      <span class="badge"><%= url %></span>
+    <%= name %></li>
+    </li>
+    <% end %>
+  </ul>
+</div>

@@ -1,0 +1,8 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <%= link_to "GitMoore", dashboard_path, class:"navbar-brand" %>
+    <p class="navbar-text">Signed in as <%= current_user.nickname %></p>
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Logout", logout_path  %></li>
+  </div>
+</nav>
