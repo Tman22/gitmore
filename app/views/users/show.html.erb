@@ -8,22 +8,29 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <%= @follow[1] %>
-    </span><br>
+    </span>
+    <br>
 
-    <span> Followers &nbsp;&nbsp; Following</span>
+    <span> Followers &nbsp;&nbsp; <%= link_to "Following", followers_path %></span>
+    <br>
+
+    <span><%= @follow[2]%></span>
+    <br>
+
+    <span>Starred</span>
   </div>
 
   <div class="col-md-8">
     <ul class="nav nav-tabs nav-justified">
-      <li role="presentation" class="active"><a href="#contributation" aria-controls="contributations" role="tab" data-toggle="tab">Contributations</a></li>
-      <li role="presentation"><a href="#repos" aria-controls="repos" role="tab" data-toggle="tab">Repositories</a></li>
+      <li role="presentation" class="active"><a href="#repos" aria-controls="repos" role="tab" data-toggle="tab">Repositories</a></li>
       <li role="presentation"><a href="#activity" aria-controls="activity" role="tab" data-toggle="tab">Public Activity</a></li>
+      <li role="presentation"><a href="#org" aria-controls="org" role="tab" data-toggle="tab">Organizations</a></li>
     </ul>
 
     <div class="tab-content">
-      <%= render partial: '/users/contribute' %>
       <%= render partial: '/users/repos' %>
       <%= render partial: '/users/activity' %>
+      <%= render partial: '/users/org' %>
     </div>
 
   </div>

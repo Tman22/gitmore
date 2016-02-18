@@ -33,6 +33,10 @@ ul.list-group {
     overflow: scroll;
 }
 
+ul.list-group.followers {
+  height: 75vh;
+}
+
 .home-page {
   height: 100vh;
   background-color: green;

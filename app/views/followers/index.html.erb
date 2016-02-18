@@ -1,0 +1,24 @@
+<h1 class="text-center"> Most recent commits repos</h1><br><br>
+  <div class="col-md-4 dashboard">
+    <% @people.each do |person, image|  %>
+    <div>
+      <%= image_tag image, class: "img-circle img-thumbnail" %>
+      <h1><%= person %></h1>
+      <h3><%= link_to "#{person} GitHub", "https://github.com/#{person}"  %></h3>
+
+    </div>
+    <br><br><br><br>
+    <% end %>
+      </div>
+  <div class="col-md-8">
+    <% @commits.each do |name, hash| %>
+      <ul class="list-group followers">
+        <% hash.each do |commit| %>
+          <li class="list-group-item">
+            <span class="badge"><%= name %></span>
+            <%= link_to commit[:message], commit[:url] %>
+          </li>
+          <% end %>
+      </ul>
+      <% end %>
+    </div>

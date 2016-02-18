@@ -6,14 +6,17 @@ class GitHubService
     @connection = Faraday.new(url: "https://api.github.com/")
     connection.headers = {"Authorization" => "token #{current_user.token}"}
   end
-#  { access_token: @current_user.token}
+
   def followers
-    # binding.pry
     parse(connection.get("/users/#{nickname}/followers"))
   end
 
   def following
     parse(connection.get("/users/#{nickname}/following"))
+  end
+
+  def starred
+    parse(connection.get("/users/#{nickname}/starred"))
   end
 
   def contributer
@@ -22,6 +25,14 @@ class GitHubService
 
   def commits
     parse(connection.get("users/#{nickname}/events/public"))
+  end
+
+  def individual(user)
+    parse(connection.get("users/#{user}/events/public"))
+  end
+
+  def organizations
+    parse(connection.get("users/#{nickname}/orgs"))
   end
 
   private

@@ -2,9 +2,8 @@
   <ul class="list-group">
     <% @commits.each do |name, url | %>
       <li class="list-group-item">
-      <span class="badge"><%= url %></span>
-    <%= name %></li>
-    </li>
+        <%= link_to name, url %>
+      </li>
     <% end %>
   </ul>
 </div>

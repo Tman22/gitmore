@@ -1,0 +1,9 @@
+<div role="tabpanel" class="tab-pane fade in active" id="org">
+  <ul class="list-group">
+    <% @org.each do |name| %>
+      <li class="list-group-item">
+        <%= link_to name, "https://github.com/orgs/#{name}" %>
+      </li>
+    <% end %>
+  </ul>
+</div>
